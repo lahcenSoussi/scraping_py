@@ -3,14 +3,19 @@
 
 import pdfkit
 
-path_wkhtmltopdf = r'/usr/local/bin/wkhtmltopdf'
+try:
+    path_wkhtmltopdf = r'/usr/local/bin/wkhtmltopdf'
+    config = pdfkit.configuration(wkhtmltopdf=path_wkhtmltopdf)
 
-#define url of the page
-url = 'https://www.python.org/' #choose any url you want
+    # #define url of the page
+    url = 'https://docs.qfq.io/en/master/'
+    print('Converting page: ', url)
+    # #convert url to pdf
+    try:
+        pdfkit.from_url(url, 'out.pdf', configuration=config)
+        print('PDF created successfully!')
+    except Exception as e:
+        print('Error: ', e)
 
-#configure pdfkit options
-config = pdfkit.configuration(wkhtmltopdf=path_wkhtmltopdf)
-
-#convert url to pdf
-pdfkit.from_url(url, 'out.pdf', configuration=config)
-#run this code in terminal, python3 wkhtmltopdf.py
+except Exception as e:
+    print('Error: ', e)

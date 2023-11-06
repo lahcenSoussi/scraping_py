@@ -3,3 +3,6 @@
 __pycache/
 *.pyc
 *.pyo
+
+env/
+jdk-21_linux-x64_bin.deb

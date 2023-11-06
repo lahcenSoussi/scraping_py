@@ -1,8 +1,8 @@
 # Web Scraping with Python
 
-Welcome to the **Web Scraping with Python** repository! This project is all about web scraping using Python, and the primary goal is to convert a web page into a PDF file named `page_to_pdf`.
+Welcome to the **Web Scraping with Python** repository! This project is all about web scraping using Python, and the primary goal is to convert a web page into a PDF file named `page_to_pdf`. `pdf_to_(images, tables, links ...)`
 
-**Note: This project is currently under development and is not yet ready for use.**
+
 
 ## Project Overview
 
